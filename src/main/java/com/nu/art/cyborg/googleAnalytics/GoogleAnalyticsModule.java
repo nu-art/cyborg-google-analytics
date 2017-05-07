@@ -25,7 +25,7 @@ import com.google.android.gms.analytics.HitBuilders.AppViewBuilder;
 import com.google.android.gms.analytics.HitBuilders.EventBuilder;
 import com.google.android.gms.analytics.HitBuilders.ExceptionBuilder;
 import com.google.android.gms.analytics.Tracker;
-import com.nu.art.software.core.tools.ExceptionTools;
+import com.nu.art.core.tools.ExceptionTools;
 import com.nu.art.cyborg.annotations.ModuleDescriptor;
 import com.nu.art.cyborg.common.consts.AnalyticsConstants;
 import com.nu.art.cyborg.core.CyborgModule;
