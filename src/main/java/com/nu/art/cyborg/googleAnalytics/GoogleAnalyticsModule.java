@@ -57,7 +57,7 @@ public final class GoogleAnalyticsModule
 	@Override
 	protected final void init() {
 		apkDetails = getModule(AppDetailsModule.class);
-		googleAnalytics = GoogleAnalytics.getInstance(cyborg.getApplication());
+		googleAnalytics = GoogleAnalytics.getInstance(cyborg.getApplicationContext());
 		googleAnalytics.setLocalDispatchPeriod(dispatchInterval);
 		createTracker();
 	}
