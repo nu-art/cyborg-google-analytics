@@ -23,8 +23,8 @@ android {
     compileSdkVersion 23
 }
 
-//if (project.hasProperty("configureUploadJavaArtifact")) {
-//    configureUploadJavaArtifact("com.nu-art-software.cyborg", "nu-art/${name}")
+//if (project.hasProperty("configureUploadAndroidLibArtifact")) {
+//    configureUploadAndroidLibArtifact("com.nu-art-software.cyborg", "nu-art/${name}")
 //}
 
 dependencies {
