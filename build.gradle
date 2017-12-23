@@ -27,6 +27,6 @@ android {
 //}
 
 dependencies {
-    compile(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
-    compile "com.google.android.gms:play-services-analytics:${GMS_VERSION}"
+    _implementation(resolveDependency('cyborg-core', 'com.nu-art-software.cyborg', "${NU_ART_VERSION}"))
+    _implementation "com.google.android.gms:play-services-analytics:${GMS_VERSION}"
 }
