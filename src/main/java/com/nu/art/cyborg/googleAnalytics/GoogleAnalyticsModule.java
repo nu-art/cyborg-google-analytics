@@ -32,9 +32,11 @@ import com.nu.art.cyborg.core.CyborgModule;
 import com.nu.art.cyborg.core.modules.IAnalyticsModule;
 import com.nu.art.cyborg.modules.AppDetailsModule;
 
-@ModuleDescriptor(
-		usesPermissions = {permission.INTERNET, permission.ACCESS_NETWORK_STATE},
-		dependencies = {AppDetailsModule.class})
+@ModuleDescriptor(usesPermissions = {
+		permission.INTERNET,
+		permission.ACCESS_NETWORK_STATE
+},
+									dependencies = {AppDetailsModule.class})
 public final class GoogleAnalyticsModule
 		extends CyborgModule
 		implements IAnalyticsModule, AnalyticsConstants {
