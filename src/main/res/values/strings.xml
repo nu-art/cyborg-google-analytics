@@ -21,5 +21,5 @@
 <resources>
     <string name="AnalyticsLowLevelTracking">In order to provide support for this application, we need to track and report usage information of the application.\nWe track only application usage, and no personal information would be recorded!</string>
     <string name="AnalyticsHighLevelTracking">In order to provide support for this application, we reserve the right to track and report usage information of this application. We track application usage and personal information!</string>
-    
+
 </resources>

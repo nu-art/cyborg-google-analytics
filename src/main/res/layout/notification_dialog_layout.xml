@@ -18,10 +18,12 @@
   ~ limitations under the License.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    >
 
     <TextView
         android:id="@+id/Body"
@@ -32,7 +34,8 @@
         android:layout_marginRight="10dp"
         android:layout_weight="0.74"
         android:text="Small Text"
-        android:textAppearance="?android:attr/textAppearanceSmall"/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        />
 
     <LinearLayout
         android:id="@+id/linearLayout1"
@@ -40,14 +43,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp" >
+        android:layout_marginRight="40dp"
+        >
 
         <Button
             android:id="@+id/OkButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.82"
-            android:text="Yes" />
+            android:text="Yes"
+            />
 
         <Button
             android:id="@+id/CancelButton"
@@ -55,7 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.82"
             android:text="No"
-            android:visibility="gone" />
+            android:visibility="gone"
+            />
     </LinearLayout>
 
 </LinearLayout>
