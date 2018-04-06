@@ -33,13 +33,13 @@ import com.nu.art.cyborg.core.modules.IAnalyticsModule;
 import com.nu.art.cyborg.modules.AppDetailsModule;
 
 @ModuleDescriptor(usesPermissions = {
-		permission.INTERNET,
-		permission.ACCESS_NETWORK_STATE
+	permission.INTERNET,
+	permission.ACCESS_NETWORK_STATE
 },
-									dependencies = {AppDetailsModule.class})
+                  dependencies = {AppDetailsModule.class})
 public final class GoogleAnalyticsModule
-		extends CyborgModule
-		implements IAnalyticsModule, AnalyticsConstants {
+	extends CyborgModule
+	implements IAnalyticsModule, AnalyticsConstants {
 
 	private static final int DefaultDispatchInterval = 30;
 
