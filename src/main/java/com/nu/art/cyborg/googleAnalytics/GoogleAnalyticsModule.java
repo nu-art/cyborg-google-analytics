@@ -32,6 +32,7 @@ import com.nu.art.cyborg.core.CyborgModule;
 import com.nu.art.cyborg.core.modules.IAnalyticsModule;
 import com.nu.art.cyborg.modules.AppDetailsModule;
 
+@SuppressWarnings("unused")
 @ModuleDescriptor(usesPermissions = {
 	permission.INTERNET,
 	permission.ACCESS_NETWORK_STATE
@@ -76,7 +77,7 @@ public final class GoogleAnalyticsModule
 	}
 
 	@Override
-	protected void printModuleDetails() {
+	protected void printDetails() {
 		logInfo("Analytics key selected: " + siteId);
 	}
 
@@ -90,7 +91,7 @@ public final class GoogleAnalyticsModule
 
 	@Override
 	public synchronized final void sendEvent(String category, String action, String label, long value) {
-		if (!isTrackingEnabled())
+		if (isTrackingDisabled())
 			return;
 
 		EventBuilder eventBuilder = new EventBuilder(category, action);
@@ -101,7 +102,7 @@ public final class GoogleAnalyticsModule
 
 	@Override
 	public synchronized final void sendException(String description, Throwable t, boolean crash) {
-		if (!isTrackingEnabled())
+		if (isTrackingDisabled())
 			return;
 
 		ExceptionBuilder exceptionBuilder = new ExceptionBuilder();
@@ -111,13 +112,13 @@ public final class GoogleAnalyticsModule
 		tracker.send(exceptionBuilder.build());
 	}
 
-	private boolean isTrackingEnabled() {
-		return apkDetails != null && !apkDetails.isAutomated();
+	private boolean isTrackingDisabled() {
+		return apkDetails == null || apkDetails.isAutomated();
 	}
 
 	@Override
 	public synchronized final void sendView(String viewName) {
-		if (!isTrackingEnabled())
+		if (isTrackingDisabled())
 			return;
 
 		tracker.setScreenName(viewName);
